@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>add a new post</title>
+		<link rel="stylesheet" href="/stylesheets/style.css" media="screen" />
+	</head>
+	
+	<body>
+		<a href="/blog/newpost"><h2 class="main-title" id="other">add a new post</h2></a>
+		<div class="formfield">
+			<form method="post">
+				<label for="subject">
+				title<br />
+				<input type="text" name="subject" value="{{subject}}" placeholder="title of your awesome post">
+				</label>				
+				<label for="content">
+				content<br />
+				<textarea name="content" placeholder="and your awesome post. . ">{{content}}</textarea>
+				</label><br />
+				<label>
+				<input type="submit" value="publish">
+				<span class="error">{{error}}</span>
+				</label>
+			</form>
+		</div>
+	</body>
+
+</html>

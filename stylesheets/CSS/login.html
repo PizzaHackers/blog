@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	
+	<meta charset="utf-8" />
+	
+	<title>Clear Login Window Template</title>
+	<link rel="stylesheet" href="css/flexi-background.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+
+	
+</head>
+<body>
+	<script src="js/flexi-background.js" type="text/javascript" charset="utf-8"></script>
+	<div id="box">
+		<img src="images/logo.png" class="logo" alt="yourlogo" />
+		<h1>Member Login</h1>
+		<form>
+			<input type="text" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'Username':this.value;" value="Username" />
+			<input type="password" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'Password':this.value;" value="Password">
+			<input type="checkbox" id="remember" value="Remember" />
+			<div class="hover-opacity"><label for="remember">Remember me</label></div>
+			<input type="button" name="" value="Log In" />
+		</form>
+	</div>
+	<a href="#" class="forgot">Forgot your username or password?</a>
+</body>
+</html>

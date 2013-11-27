@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>the G33k blog</title>
+		<link rel="stylesheet" href="/stylesheets/style.css" media="screen" />
+	</head>
+	
+	<body>
+		<a href="/blog"><h2 class="main-title">the G33k blog</h2></a>
+		{% if img_url %}
+			<div id="map"><img src="{{img_url}}"></div>
+		{% endif %}
+		{% for entry in contents %}
+		<div class="post">
+			<div class="post-heading">
+			<div class="post-title">{{entry.subject}}<span class="post-date">{{entry.created.strftime("%b %d, %Y")}}</span></div>
+			</div>
+			<div class="post-content">{{entry.content.replace('\n', '<br>') | safe}}</div><br /><br />
+		</div>
+		{% endfor %}
+		<div class="footer">You've been here {{visits}} times. Well done. {{reward}}<br>Queried {{age}} seconds ago.</div>
+	</body>
+
+</html>
